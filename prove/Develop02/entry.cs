@@ -8,7 +8,6 @@ public class Entry
     public string _bestPart;
     public string _worstPart;
 
-    // Constructor
     public Entry(string prompt, string response, string date, string mood, string whereDidYouGo, string bestPart, string worstPart)
     {
         _prompt = prompt;
@@ -20,7 +19,6 @@ public class Entry
         _worstPart = worstPart;
     }
 
-    // Method to display the entry
     public void DisplayEntry()
     {
         Console.WriteLine($"Date: {_date}");
