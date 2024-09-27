@@ -6,10 +6,10 @@ public class Journal
 {
     public List<Entry> _entries = new List<Entry>();
 
-    public void AddEntry(string prompt, string response, string mood, string whereDidYouGo, string bestPart, string worstPart)
+    public void AddEntry(string prompt, string response, string whereDidYouGo)
     {
         string date = DateTime.Now.ToString("yyyy-MM-dd");
-        Entry newEntry = new Entry(prompt, response, date, mood, whereDidYouGo, bestPart, worstPart);
+        Entry newEntry = new Entry(prompt, response, date, whereDidYouGo);
         _entries.Add(newEntry);
     }
 
@@ -36,11 +36,8 @@ public class Journal
                 string safeResponse = entry._response.Replace("\"", "\"\"");
                 string safePrompt = entry._prompt.Replace("\"", "\"\"");
                 string safeWhereDidYouGo = entry._whereDidYouGo.Replace("\"", "\"\"");
-                string safeBestPart = entry._bestPart.Replace("\"", "\"\"");
-                string safeWorstPart = entry._worstPart.Replace("\"", "\"\"");
-                string safeMood = entry._mood.Replace("\"", "\"\"");
 
-                writer.WriteLine($"\"{entry._date}\",\"{safeMood}\",\"{safeWhereDidYouGo}\",\"{safeBestPart}\",\"{safeWorstPart}\",\"{safePrompt}\",\"{safeResponse}\"");
+                writer.WriteLine($"\"{entry._date}\",\"{safeWhereDidYouGo}\",\"{safePrompt}\",\"{safeResponse}\"");
             }
         }
 
@@ -58,14 +55,11 @@ public class Journal
             string[] parts = line.Split(',');
 
             string date = parts[0].Trim('"');
-            string mood = parts[1].Trim('"');
             string whereDidYouGo = parts[2].Trim('"');
-            string bestPart = parts[3].Trim('"');
-            string worstPart = parts[4].Trim('"');
             string prompt = parts[5].Trim('"');
             string response = parts[6].Trim('"');
 
-            Entry entry = new Entry(prompt, response, date, mood, whereDidYouGo, bestPart, worstPart);
+            Entry entry = new Entry(prompt, response, date, whereDidYouGo);
             _entries.Add(entry);
         }
     }

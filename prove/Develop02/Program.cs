@@ -35,19 +35,11 @@ class Program
                 Console.Write("Your response: ");
                 string response = Console.ReadLine();
 
-                Console.Write("How are you feeling today? (e.g., happy, sad, neutral): ");
-                string mood = Console.ReadLine();
 
                 Console.Write("Where did you go today? ");
                 string whereDidYouGo = Console.ReadLine();
 
-                Console.Write("What was the best part of your day? ");
-                string bestPart = Console.ReadLine();
-
-                Console.Write("What was the worst part of your day? ");
-                string worstPart = Console.ReadLine();
-
-                journal.AddEntry(prompt, response, mood, whereDidYouGo, bestPart, worstPart);
+                journal.AddEntry(prompt, response, whereDidYouGo);
             }
 
             else if (choice == "2")
