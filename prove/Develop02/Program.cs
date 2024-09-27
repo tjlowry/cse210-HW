@@ -1,4 +1,7 @@
 using System;
+// To exceed requirments I made it so the journal will always be saved as a .csv by adding .csv to whatever the user puts as the journal name. 
+// made sure the commas were handled properly with the csv file
+// I also aske the user additional info with where _whereDidYouGo
 
 class Program
 {
