@@ -1,5 +1,5 @@
 using System;
-
+// I think I went above and beyond by giving the user options for which scripture they want to memorize from a list. 
 class Program
 {
     static void Main(string[] args)
