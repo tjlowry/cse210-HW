@@ -1,5 +1,5 @@
 using System;
-
+// I created a progress bar to show how much time is left for the breathing activity and other parts of the program
 class Program
 {
     static void Main()
