@@ -1,0 +1,7 @@
+500
+SimpleGoal:Run Marathon|Complete a full marathon|1000|False
+SimpleGoal:Learn Guitar|Master basic guitar chords|200|True
+EternalGoal:Daily Scripture Study|Read scriptures for 15 minutes|50|12
+EternalGoal:Exercise|Exercise for 30 minutes|75|8
+ChecklistGoal:Temple Attendance|Attend the temple this month|100|2|500|1
+ChecklistGoal:Family History|Index family names|50|3|250|0
